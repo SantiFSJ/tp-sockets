@@ -28,7 +28,7 @@ public class BarcoClient {
             OutputStream output = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(output, true);
             writer.println(barco.getNumeroDeBarco()+"/"+barco.getOrientacion());
-            System.out.println("El Barco nro"+barco.getNumeroDeBarco()+" con orientación "+barco.getOrientacion()+" esta esperando otro barco para poder cruzar");
+            System.out.println("El Barco nro "+barco.getNumeroDeBarco()+" con orientación "+barco.getOrientacion()+" esta esperando otro barco para poder cruzar");
 
             if(sePermitioLaNavegacion(socket))
                 System.out.println("El barco número " + barco.getNumeroDeBarco() + " pudo cruzar el estrecho hacia el "+barco.getOrientacion()+" con éxito!!");
